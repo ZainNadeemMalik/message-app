@@ -8,23 +8,22 @@ import Layout from "./Layout";
 
 const Routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
   },
   {
-    path: '/signup',
-    element: <SignupPage />
+    path: "/signup",
+    element: <SignupPage />,
   },
   {
-    path: '/chat',
+    path: "/chat",
     element: <Layout />,
     children: [
-      { path: '', element: <ChatPage />},
-      { path: ':firendId', element: <ChatPage />},
-      { path: ':userId/:friendId', element: <ChatPage />},
-      { path: ':userId/:friendId/:friendUsername', element: <ChatPage />},
-
-    ]
+      { path: "", element: <ChatPage /> },
+      { path: ":firendId", element: <ChatPage /> },
+      { path: ":userId/:friendId", element: <ChatPage /> },
+      { path: ":userId/:friendId/:friendUsername", element: <ChatPage /> },
+    ],
   },
   // {
   //   path: '/chat/:friendId',
@@ -39,18 +38,18 @@ const Routes: RouteObject[] = [
   //   element: <ChatPage />
   // },
   {
-    path: '/users',
+    path: "/users",
     element: <Layout />,
-    children: [{ path: '', element: <Users />}]
+    children: [{ path: "", element: <Users /> }],
   },
   {
-    path: '/f',
-    element: <FriendsSideBar />
-  }
+    path: "/f",
+    element: <FriendsSideBar />,
+  },
   // {
   //   path: '*',
   //   element: <ErrorPage />
   // }
-]
+];
 
-export default Routes
+export default Routes;
