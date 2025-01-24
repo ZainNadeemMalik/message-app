@@ -23,7 +23,7 @@ export const useChatStore = create<ChatStoreState>((set) => ({
   initializeSocket: (userId: number) => {
     set({ loading: true });
     // put an env in the url below
-    const socket = io("http://message-app-backend-production.up.railway.app", { withCredentials: true });
+    const socket = io("https://message-app-backend-production.up.railway.app", { withCredentials: true });
 
     socket.on("connect", () => {
       console.log("User connected:", socket.id);

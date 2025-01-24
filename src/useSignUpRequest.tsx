@@ -16,16 +16,12 @@ const useSignUpRequest = (options = {}) => {
         options,
       );
       storeAccessToken(response.data.accessToken);
-      console.log("stored access token:", response.data.accessToken);
 
       storeRefreshToken(response.data.refreshToken);
-      console.log("stored refresh token:", response.data.refreshToken);
 
       storeUserId(response.data.userId);
-      console.log("stored userid token:", response.data.userId);
 
       initializeSocket(parseInt(response.data.userId));
-      console.log("iniited sosketen");
 
       return response.data;
     } catch (err) {
