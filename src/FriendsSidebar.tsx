@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "redaxios";
 import { handleLogout } from "./utils";
 import { useChatStore } from "./useChatStore";
@@ -53,12 +53,12 @@ export const FriendsSideBar = () => {
       </ul>
 
       <div className="mt-auto p-2">
-        <a
-          href="/users"
+        <Link
+          to="/users"
           className="block mb-2 text-blue-500 hover:text-blue-700 underline"
         >
           Find new friends
-        </a>
+        </Link>
         <button
           onClick={() => logout()}
           className="w-full py-2 border rounded hover:bg-red-700  hover:text-black"

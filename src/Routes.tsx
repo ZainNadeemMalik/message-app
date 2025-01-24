@@ -27,7 +27,10 @@ const Routes: RouteObject[] = [
   },
   {
     path: "/users",
-    element: <Users />
+    element: <Layout />,
+    children: [
+      { path: "", element: <Users /> },
+    ]
   },
   {
     path: "/f",

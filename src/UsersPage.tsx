@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "redaxios";
 import { useChatStore } from "./useChatStore";
 import { User } from "./types";
+import { Link } from "react-router-dom";
 
 export const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -75,9 +76,9 @@ export const Users = () => {
           </li>
         ))}
       </ul>
-      <a href="/chat" className="underline text-blue-500 hover:text-blue-700">
+      <Link to="/chat" className="underline text-blue-500 hover:text-blue-700">
         Chat Page
-      </a>
+      </Link>
     </div>
   );
 };

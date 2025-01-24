@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "redaxios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useChatStore } from "./useChatStore";
 import { Message } from "./types";
 
@@ -79,12 +79,12 @@ const ChatPage = () => {
         <p className="font-bold text-6xl mb-4">
           Select a friend to start a conversation.
         </p>
-        <a
-          href="/users"
+        <Link
+          to="/users"
           className="underline text-blue-500 hover:text-blue-700"
         >
           Find new friends
-        </a>
+        </Link>
       </div>
     );
   }
