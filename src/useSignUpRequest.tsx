@@ -11,7 +11,7 @@ const useSignUpRequest = (options = {}) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/signup",
+        "http://message-app-backend-production.up.railway.app/signup",
         body,
         options,
       );

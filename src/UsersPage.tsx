@@ -12,7 +12,7 @@ export const Users = () => {
     const fetchUsers = async () => {
       try {
         const result = await axios.get<User[]>(
-          "http://localhost:3000/fetchUsers",
+          "http://message-app-backend-production.up.railway.app/fetchUsers",
         );
         if (userId) {
           const userIdNumber = parseInt(userId);
@@ -37,7 +37,7 @@ export const Users = () => {
     const friend = users.find((user) => user.id === friendId);
 
     try {
-      const response = await axios.post("http://localhost:3000/addFriend", {
+      const response = await axios.post("http://message-app-backend-production.up.railway.app/addFriend", {
         userId,
         friendId,
       });

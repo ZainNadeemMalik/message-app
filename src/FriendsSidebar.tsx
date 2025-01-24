@@ -14,7 +14,7 @@ export const FriendsSideBar = () => {
     const fetchFriends = async () => {
       try {
         const result = await axios.get(
-          `http://localhost:3000/fetchFriends/${userId}`,
+          `http://message-app-backend-production.up.railway.app/fetchFriends/${userId}`,
         );
 
         setFriends(result.data);
