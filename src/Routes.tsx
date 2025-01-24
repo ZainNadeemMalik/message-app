@@ -20,27 +20,14 @@ const Routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { path: "", element: <ChatPage /> },
-      { path: ":firendId", element: <ChatPage /> },
+      { path: ":friendId", element: <ChatPage /> },
       { path: ":userId/:friendId", element: <ChatPage /> },
       { path: ":userId/:friendId/:friendUsername", element: <ChatPage /> },
     ],
   },
-  // {
-  //   path: '/chat/:friendId',
-  //   element: <ChatPage />
-  // },
-  // {
-  //   path: '/chat/:userId/:friendId',
-  //   element: <ChatPage />
-  // },
-  // {
-  //   path: '/chat/:userId/:friendId/:friendUsername',
-  //   element: <ChatPage />
-  // },
   {
     path: "/users",
-    element: <Layout />,
-    children: [{ path: "", element: <Users /> }],
+    element: <Users />
   },
   {
     path: "/f",
