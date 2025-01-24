@@ -18,7 +18,7 @@ const ChatPage = () => {
 
     try {
       const result = await axios.get(
-        `http://message-app-backend-production.up.railway.app/fetchMessages/${userId}/${friendId}`,
+        `https://message-app-backend-production.up.railway.app/fetchMessages/${userId}/${friendId}`,
       );
 
       setMessages(result.data || []);
