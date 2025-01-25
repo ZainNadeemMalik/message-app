@@ -57,7 +57,7 @@ export const SignupPage = () => {
               className="bg-transparent border border-white rounded px-2 py-1 w-full"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter Username"
+              placeholder="Username must be 4 characters long"
               required
             />
           </div>
@@ -73,7 +73,7 @@ export const SignupPage = () => {
               className="bg-transparent border border-white rounded px-2 py-1 w-full"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter Password"
+              placeholder="Password must be 4 characters long"
               required
             />
           </div>
